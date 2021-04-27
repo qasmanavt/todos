@@ -21,8 +21,20 @@ function addTodo(todo){
 
         todosUL.appendChild(todoEl);
 
+        todoEl.addEventListener('click', () => {
+            todoEl.classList.toggle('completed');
+        })
+
+        todoEl.addEventListener('contextmenu', (e) =>{
+            e.preventDefault();
+
+            todoEl.remove();
+        })
+
         input.value='';
     }
+
+    
 
     // console.log(todoText);
 }
